@@ -25,18 +25,19 @@ module.exports = {
       colors: {
         primary: '#131424',
         secondary: '#393A47',
-        accent: '#F13024',
+        accent: '#DAA520',
         // accent_dark: '#F13024',
         // accent_light: ''
 
       },
 
       backgroundImage: {
-        explosion: 'url("/bg-explosion.png")',
+        explosion_dark: 'url("/bg-explosion-dark.png")',
+        explosion_light: 'url("/bg-explosion-light.png")',
         circles: 'url("/bg-circles.png")',
         circleStar: 'url("/circle-star.svg")',
-        site_dark: 'url("/site-bg-dark.svg")',
-        site_light: 'url("/site-bg-light.svg")',
+        site_dark: 'url("/bg-dark.svg")',
+        site_light: 'url("/bg-light.svg")',
       },
       animation: {
         'spin-slow': 'spin 6s linear infinite',
