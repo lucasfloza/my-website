@@ -15,13 +15,13 @@ const TopLeftImg = () => {
 
   useEffect(()=>{
     console.log("Theme: ", currentTheme);
-    setPathImage(currentTheme === 'light' ? '/top-left-img-light.png':'/top-left-img-dark.png')
+    setPathImage(currentTheme === 'light' ? '/topLeft-img-light.png':'/topLeft-img-dark.png')
     
   },[currentTheme])
 
 
   return (
-      <div className="absolute left-0 top-0 z-10 w-[200px] xl:w-[400px]">
+      <div className="absolute left-0 top-0 z-10 w-[200px] xl:w-[400px] animate-pulse">
 
         <Image src={pathImage} width={400} height={400} alt="" />
 

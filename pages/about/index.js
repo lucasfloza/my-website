@@ -134,7 +134,7 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
+            className="text-black dark:text-white/60 max-w-[600px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
             10 years ago, I began freelancing as a developer. Since then, I've
             done remote work for agencies, counsulted for startups, and
@@ -230,9 +230,29 @@ const About = () => {
                   <div className="flex gap-x-4">
                     {/* icons */}
                     {item.icons?.map((icon, itemIndex) => {
-                      return <div className="text-2xl text-white">{icon}</div>;
-                    })}
-                  </div>
+                          // TODO: Implement tooltip icons
+                          return (
+                            <div className="text-2xl text-black dark:text-white px-3">
+                              {icon}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    ) : (
+                      <div className="">
+                        <p className=" text-black/60 dark:text-white/60">
+                          <span className="font-bold ">{item.stage}</span>
+                          {" ٭ " + item.company + " - " + item.title}
+                        </p>
+                        {item.details && (
+                          <ul className="list-disc list-inside text-black/60 dark:text-white/60">
+                          <li>{item.details}</li>
+                        </ul>
+                        )}
+                        
+                      </div>
+                    )}
+                  </>
                 </div>
               );
             })}
