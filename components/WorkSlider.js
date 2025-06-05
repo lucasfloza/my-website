@@ -1,4 +1,3 @@
-// data
 const workSlides = {
   slides: [
     {
@@ -44,19 +43,12 @@ const workSlides = {
   ],
 };
 
-// import swiper react components
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-
-// import required modules
 import { Pagination } from "swiper";
-
-// icons
 import { BsArrowRight } from "react-icons/bs";
-
-// next image
 import Image from "next/image";
 
 const WorkSlider = () => {
@@ -77,7 +69,10 @@ const WorkSlider = () => {
                 return (
                   // eslint-disable-next-line react/jsx-key
                   <div className="relative rounded-lg overflow-hidden flex items-center justify-center group">
-                    <div className="flex items-center justify-center relative overflow-hidden group" key={index}>
+                    <div
+                      className="flex items-center justify-center relative overflow-hidden group"
+                      key={index}
+                    >
                       {/* image */}
                       <Image src={image.path} width={500} height={300} alt="" />
                       {/* overlay gradient */}

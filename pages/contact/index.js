@@ -1,22 +1,12 @@
-// components
-import Circles from "/components/Circles";
-
-// icons
 import { BsArrowRight } from "react-icons/bs";
-
-// framer
 import { motion } from "framer-motion";
-
-// variants
 import { fadeIn } from "../../variants";
 
 const Contact = () => {
   return (
     <div className="h-full bg-primary/30">
       <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
-        {/* text & form  */}
         <div className="flex flex-col w-full max-w-[700px]">
-          {/* text  */}
           <motion.h2
             variants={fadeIn("up", 0.2)}
             initial="hidden"
@@ -33,7 +23,6 @@ const Contact = () => {
             exit="hidden"
             className="flex-1 flex flex-col gap-6 w-full mx-auto"
           >
-            {/* input group  */}
             <div className="flex gap-x-6 w-full">
               <input type="text" placeholder="name" className="input" />
               <input type="text" placeholder="email" className="input" />

@@ -1,32 +1,29 @@
-// next image
-import Image from "next/image";
+"use client";
 
-// Providers themes
-import { useTheme, ThemeProvider } from "next-themes";
+import Image from "next/image";
+import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
-
 const TopLeftImg = () => {
-  const { theme, setTheme } = useTheme();
-  const [pathImage, setPathImage] = useState('');
+  const { theme, systemTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-  const currentTheme = theme === 'system' ? systemTheme : theme;
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
+  if (!mounted) return null;
 
-  useEffect(()=>{
-    console.log("Theme: ", currentTheme);
-    setPathImage(currentTheme === 'light' ? '/topLeft-img-light.png':'/topLeft-img-dark.png')
-    
-  },[currentTheme])
-
+  const currentTheme = theme === "system" ? systemTheme : theme;
+  const pathImage =
+    currentTheme === "light"
+      ? "/topLeft-img-light.png"
+      : "/topLeft-img-dark.png";
 
   return (
-      <div className="absolute left-0 top-0 z-10 w-[200px] xl:w-[400px] animate-pulse">
-
-        <Image src={pathImage} width={400} height={400} alt="" />
-
-        
-      </div>
+    <div className="absolute left-0 top-0 z-10 w-[200px] xl:w-[400px] animate-pulse">
+      <Image src={pathImage} width={400} height={400} alt="" unoptimized />
+    </div>
   );
 };
 

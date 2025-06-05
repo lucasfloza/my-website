@@ -1,5 +1,6 @@
 {
-  "name": "lucas-portifolio",
+  "name": "lucas-souza-portfolio",
+  "description": "Lucas Souza's Portfolio Website",
   "version": "0.1.0",
   "private": true,
   "scripts": {

@@ -1,17 +1,7 @@
-//next image
-import Image from "next/image";
-
-//next link
 import Link from "next/link";
-
-// components
 import Socials from "../components/Socials";
-
-// icons
 import { FiMoon } from "react-icons/fi";
 import { BsSun } from "react-icons/bs";
-
-// theme
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
@@ -29,17 +19,12 @@ const Header = () => {
     <header className="absolute z-30 w-full flex items-center px-16 xl:px-0 xl:h-[90px]">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-y-6 py-8">
-          {/*Logo*/}
           <Link href={"/"}>
-            <Image
-              src={"/logo.svg"}
-              width={200}
-              height={48}
-              alt=""
-              priority={true}
-            />
+            <div className="text-3xl">
+              <span className="font-bold ">lucas</span> <span>souza</span>{" "}
+              <span className="text-red-600">.</span>
+            </div>
           </Link>
-          {/* Socials */}
           <Socials />
           {theme === "dark" ? (
             <BsSun
